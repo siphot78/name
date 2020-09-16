@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+height: 100vh;
+position: relative;
+overflow: hidden;
+background: linear-gradient(to right,GREY #8ecdff);
+}
+.menu{
+width: 100%;
+height: 100vh;
+position: relative;
+overflow: hidden;
+background: linear-gradient(to right,GREY, #8ecdff);
+}
+
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+    flex-basis: 20%;
+}
+.brand-title img{
+width: 150PX;
+
+}
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.information{
+    width: 1000px;
+    height:100px;
+    position: absolute;
+top:50%;
+left:-10%;
+transform: translateY(-50%);
+}
+#circle{
+    width: 250px;
+    height:250px;
+    position: absolute;
+    margin-bottom: 3rem;
+top:0;
+left:0;
+border-radius: 50%;
+
+background-image: url(1.png);
+
+}
+.feature{
+    position: absolute;
+}
+.one{
+    top: 45px;
+    right: 5px;
+}
+.two{
+top:45px;
+left:35px;
+}
+.three{
+bottom: 45px;
+left: 5px;
+}
+.four{
+bottom: 150px;
+right: 350px;
+}
+
+
+
+.cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid crimson;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	margin-top: 30px;
+	transition: .3s ease;
+	transition-property: background-color, color;
+}
+.cta:hover {
+	color: white;
+	background-color: crimson;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
